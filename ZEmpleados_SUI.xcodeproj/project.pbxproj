@@ -20,6 +20,7 @@
 		0CA39C122D517596004AF811 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C112D517596004AF811 /* NetworkError.swift */; };
 		0CA39C142D517673004AF811 /* URLSession_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C132D517673004AF811 /* URLSession_Extension.swift */; };
 		0CA39C172D517781004AF811 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C162D517781004AF811 /* NetworkInteractor.swift */; };
+		0CA39C1A2D517DFA004AF811 /* EmpleadosVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C192D517DFA004AF811 /* EmpleadosVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		0CA39C112D517596004AF811 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0CA39C132D517673004AF811 /* URLSession_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession_Extension.swift; sourceTree = "<group>"; };
 		0CA39C162D517781004AF811 /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
+		0CA39C192D517DFA004AF811 /* EmpleadosVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpleadosVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				0CA39BF52D513FE9004AF811 /* ZEmpleados_SUIApp.swift */,
 				0CA39BF72D513FE9004AF811 /* ContentView.swift */,
+				0CA39C182D517CC6004AF811 /* ViewModel */,
 				0CA39C152D5176EA004AF811 /* Interactor */,
 				0CA39C0A2D514E4C004AF811 /* Interface */,
 				0CA39C032D5142D4004AF811 /* Model */,
@@ -116,6 +119,14 @@
 				0CA39C162D517781004AF811 /* NetworkInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0CA39C182D517CC6004AF811 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0CA39C192D517DFA004AF811 /* EmpleadosVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				0CA39BF82D513FE9004AF811 /* ContentView.swift in Sources */,
 				0CA39C092D514785004AF811 /* Enums.swift in Sources */,
 				0CA39C102D516300004AF811 /* URLRequest_Extension.swift in Sources */,
+				0CA39C1A2D517DFA004AF811 /* EmpleadosVM.swift in Sources */,
 				0CA39BF62D513FE9004AF811 /* ZEmpleados_SUIApp.swift in Sources */,
 				0CA39C172D517781004AF811 /* NetworkInteractor.swift in Sources */,
 				0CA39C072D514753004AF811 /* Model.swift in Sources */,
@@ -338,8 +350,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,9 +359,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "miguel.gallego.ZEmpleados-SUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -367,8 +383,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,9 +392,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "miguel.gallego.ZEmpleados-SUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

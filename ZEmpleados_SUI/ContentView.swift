@@ -5,14 +5,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var vm = EmpleadosVM()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List(vm.empleados) { empleado in
+            let strEmpleado = empleado.firstName + " " + empleado.lastName
+            Text(strEmpleado)
         }
-        .padding()
     }
 }
 
