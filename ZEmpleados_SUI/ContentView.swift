@@ -1,9 +1,6 @@
-//
 //  ContentView.swift
 //  ZEmpleados_SUI
-//
 //  Created by Miguel Gallego on 3/2/25.
-//
 
 import SwiftUI
 

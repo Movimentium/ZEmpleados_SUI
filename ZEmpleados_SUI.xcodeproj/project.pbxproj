@@ -14,6 +14,8 @@
 		0CA39C052D514487004AF811 /* ModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C042D514487004AF811 /* ModelDTO.swift */; };
 		0CA39C072D514753004AF811 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C062D514753004AF811 /* Model.swift */; };
 		0CA39C092D514785004AF811 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C082D514785004AF811 /* Enums.swift */; };
+		0CA39C0C2D514F14004AF811 /* URL_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C0B2D514F14004AF811 /* URL_Extension.swift */; };
+		0CA39C0E2D515538004AF811 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0CA39C0D2D515538004AF811 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		0CA39C042D514487004AF811 /* ModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDTO.swift; sourceTree = "<group>"; };
 		0CA39C062D514753004AF811 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0CA39C082D514785004AF811 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		0CA39C0B2D514F14004AF811 /* URL_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_Extension.swift; sourceTree = "<group>"; };
+		0CA39C0D2D515538004AF811 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 		0CA39BE92D513FE9004AF811 = {
 			isa = PBXGroup;
 			children = (
+				0CA39C0D2D515538004AF811 /* README.md */,
 				0CA39BF42D513FE9004AF811 /* ZEmpleados_SUI */,
 				0CA39BF32D513FE9004AF811 /* Products */,
 			);
@@ -59,6 +64,7 @@
 			children = (
 				0CA39BF52D513FE9004AF811 /* ZEmpleados_SUIApp.swift */,
 				0CA39BF72D513FE9004AF811 /* ContentView.swift */,
+				0CA39C0A2D514E4C004AF811 /* Interface */,
 				0CA39C032D5142D4004AF811 /* Model */,
 				0CA39BF92D513FEB004AF811 /* Assets.xcassets */,
 				0CA39BFB2D513FEB004AF811 /* Preview Content */,
@@ -82,6 +88,14 @@
 				0CA39C082D514785004AF811 /* Enums.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0CA39C0A2D514E4C004AF811 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				0CA39C0B2D514F14004AF811 /* URL_Extension.swift */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA39C0E2D515538004AF811 /* README.md in Resources */,
 				0CA39BFD2D513FEB004AF811 /* Preview Assets.xcassets in Resources */,
 				0CA39BFA2D513FEB004AF811 /* Assets.xcassets in Resources */,
 			);
@@ -159,6 +174,7 @@
 				0CA39C092D514785004AF811 /* Enums.swift in Sources */,
 				0CA39BF62D513FE9004AF811 /* ZEmpleados_SUIApp.swift in Sources */,
 				0CA39C072D514753004AF811 /* Model.swift in Sources */,
+				0CA39C0C2D514F14004AF811 /* URL_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
