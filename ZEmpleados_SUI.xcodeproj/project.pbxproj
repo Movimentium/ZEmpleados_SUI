@@ -19,6 +19,7 @@
 		0CA39C102D516300004AF811 /* URLRequest_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C0F2D516300004AF811 /* URLRequest_Extension.swift */; };
 		0CA39C122D517596004AF811 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C112D517596004AF811 /* NetworkError.swift */; };
 		0CA39C142D517673004AF811 /* URLSession_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C132D517673004AF811 /* URLSession_Extension.swift */; };
+		0CA39C172D517781004AF811 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C162D517781004AF811 /* NetworkInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		0CA39C0F2D516300004AF811 /* URLRequest_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest_Extension.swift; sourceTree = "<group>"; };
 		0CA39C112D517596004AF811 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0CA39C132D517673004AF811 /* URLSession_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession_Extension.swift; sourceTree = "<group>"; };
+		0CA39C162D517781004AF811 /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				0CA39BF52D513FE9004AF811 /* ZEmpleados_SUIApp.swift */,
 				0CA39BF72D513FE9004AF811 /* ContentView.swift */,
+				0CA39C152D5176EA004AF811 /* Interactor */,
 				0CA39C0A2D514E4C004AF811 /* Interface */,
 				0CA39C032D5142D4004AF811 /* Model */,
 				0CA39BF92D513FEB004AF811 /* Assets.xcassets */,
@@ -105,6 +108,14 @@
 				0CA39C112D517596004AF811 /* NetworkError.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		0CA39C152D5176EA004AF811 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0CA39C162D517781004AF811 /* NetworkInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				0CA39C092D514785004AF811 /* Enums.swift in Sources */,
 				0CA39C102D516300004AF811 /* URLRequest_Extension.swift in Sources */,
 				0CA39BF62D513FE9004AF811 /* ZEmpleados_SUIApp.swift in Sources */,
+				0CA39C172D517781004AF811 /* NetworkInteractor.swift in Sources */,
 				0CA39C072D514753004AF811 /* Model.swift in Sources */,
 				0CA39C0C2D514F14004AF811 /* URL_Extension.swift in Sources */,
 			);
