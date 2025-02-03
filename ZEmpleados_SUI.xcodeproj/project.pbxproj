@@ -16,6 +16,7 @@
 		0CA39C092D514785004AF811 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C082D514785004AF811 /* Enums.swift */; };
 		0CA39C0C2D514F14004AF811 /* URL_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C0B2D514F14004AF811 /* URL_Extension.swift */; };
 		0CA39C0E2D515538004AF811 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0CA39C0D2D515538004AF811 /* README.md */; };
+		0CA39C102D516300004AF811 /* URLRequest_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C0F2D516300004AF811 /* URLRequest_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		0CA39C082D514785004AF811 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		0CA39C0B2D514F14004AF811 /* URL_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_Extension.swift; sourceTree = "<group>"; };
 		0CA39C0D2D515538004AF811 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0CA39C0F2D516300004AF811 /* URLRequest_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA39C0B2D514F14004AF811 /* URL_Extension.swift */,
+				0CA39C0F2D516300004AF811 /* URLRequest_Extension.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				0CA39C052D514487004AF811 /* ModelDTO.swift in Sources */,
 				0CA39BF82D513FE9004AF811 /* ContentView.swift in Sources */,
 				0CA39C092D514785004AF811 /* Enums.swift in Sources */,
+				0CA39C102D516300004AF811 /* URLRequest_Extension.swift in Sources */,
 				0CA39BF62D513FE9004AF811 /* ZEmpleados_SUIApp.swift in Sources */,
 				0CA39C072D514753004AF811 /* Model.swift in Sources */,
 				0CA39C0C2D514F14004AF811 /* URL_Extension.swift in Sources */,
