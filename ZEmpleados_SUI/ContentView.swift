@@ -10,18 +10,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List(vm.empleados) { empleado in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(empleado.fullName)
-                            .font(.headline)
-                        Text(empleado.email)
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer()
-                    // TODO: AsyncImage
-
-                }
+                EmpleadoCellView(empleado: empleado)
             }
             .navigationTitle("Empleados")
         }
