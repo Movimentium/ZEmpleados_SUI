@@ -29,9 +29,9 @@ enum Genero: String, Codable, CaseIterable, Identifiable {
 }
 
 enum SortType: String, CaseIterable, Identifiable {
-    case ascendent = "Ascendent"
-    case descendent = "Descendent"
-    case byID = "By ID"
+    case ascendent = "Ascendente"
+    case descendent = "Descendente"
+    case byID = "Por ID"
     
     var id: Self { self }
 }

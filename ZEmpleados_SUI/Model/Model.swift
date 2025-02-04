@@ -19,6 +19,6 @@ struct Empleado: Identifiable, Hashable {
 
 extension Empleado {
     var fullName: String {
-        "\(lastName) \(firstName)"
+        "\(firstName) \(lastName) "
     }
 }

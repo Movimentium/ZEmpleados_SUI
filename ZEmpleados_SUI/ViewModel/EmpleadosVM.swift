@@ -10,6 +10,8 @@ final class EmpleadosVM: ObservableObject {
     @Published var empleados: [Empleado] = []
     @Published var showErrorAlert = false
     var errorMsg = ""
+    @Published var sortType = SortType.ascendent
+    @Published var strSearch = ""
     
     init(networkInteractor: DataInteractor = NetworkInteractor()) {
         self.networkInteractor = networkInteractor
@@ -36,7 +38,19 @@ final class EmpleadosVM: ObservableObject {
     }
     
     func getEmpleados(porDpto dpto: Departamento) -> [Empleado] {
-        empleados.filter { $0.department == dpto }
+        empleados
+            .filter { $0.department == dpto }  // filtro por dpto
+            .filter {                          // filtro de búsqueda
+                if strSearch.isEmpty { return true } // se devuelven todos los elems
+                return $0.fullName.localizedCaseInsensitiveContains(strSearch)
+            }
+            .sorted {
+                switch sortType {
+                case .ascendent:   $0.fullName <= $1.fullName
+                case .descendent:  $0.fullName >= $1.fullName
+                case .byID:        $0.id <= $1.id
+                }
+            }
     }
 }
 

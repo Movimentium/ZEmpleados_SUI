@@ -24,12 +24,24 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Empleados")
+            .searchable(text: $vm.strSearch, prompt: "Buscar empleado")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Menu("Ordenar") {
+                        ForEach(SortType.allCases) { sortType in
+                            Button(sortType.rawValue) {
+                                vm.sortType = sortType
+                            }
+                        }
+                    } 
+                }
+            }
         }
         .alert("Error", isPresented: $vm.showErrorAlert) {
+            Text(vm.errorMsg)
             /* en URL_Extension, cambia en el str path a "getEmp" pe
              para probar esta alert. O, pe, cambia en EmpleadoDTO firstmememe
             */
-            Text(vm.errorMsg)
         }
         
     }
