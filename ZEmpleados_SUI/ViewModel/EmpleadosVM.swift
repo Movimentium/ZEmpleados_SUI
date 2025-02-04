@@ -34,6 +34,10 @@ final class EmpleadosVM: ObservableObject {
             }
         }
     }
+    
+    func getEmpleados(porDpto dpto: Departamento) -> [Empleado] {
+        empleados.filter { $0.department == dpto }
+    }
 }
 
 

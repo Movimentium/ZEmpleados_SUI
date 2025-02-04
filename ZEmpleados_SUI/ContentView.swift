@@ -12,14 +12,22 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List(vm.empleados) { empleado in
-                EmpleadoCellView(empleado: empleado)
+            List {
+                ForEach(Departamento.allCases) { dpto in
+                    Section {
+                        ForEach(vm.getEmpleados(porDpto: dpto)) { empleado in
+                            EmpleadoCellView(empleado: empleado)
+                        }
+                    } header: {
+                        Text(dpto.rawValue)
+                    }
+                }
             }
             .navigationTitle("Empleados")
         }
         .alert("Error", isPresented: $vm.showErrorAlert) {
             /* en URL_Extension, cambia en el str path a "getEmp" pe
-             para probar esta alert. O, pe, cambia en EmpleadoDTO a avatarrr
+             para probar esta alert. O, pe, cambia en EmpleadoDTO firstmememe
             */
             Text(vm.errorMsg)
         }
