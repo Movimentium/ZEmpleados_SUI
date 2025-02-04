@@ -10,9 +10,12 @@ import SwiftUI
 
 @main
 struct ZEmpleados_SUIApp: App {
+    @StateObject var vm = EmpleadosVM()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(vm)
         }
     }
 }

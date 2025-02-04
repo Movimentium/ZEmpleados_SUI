@@ -5,7 +5,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var vm = EmpleadosVM()
+    // @ObservedObject var vm = EmpleadosVM()
+    // Cambiamos esto por un @StateObject instanciado en ...App.swift
+    // e inyectándolo como un objeto de entorno con .environmentObject()
+    @EnvironmentObject var vm: EmpleadosVM
     
     var body: some View {
         NavigationStack {
@@ -19,5 +22,8 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(vm: EmpleadosVM(networkInteractor: DataTestInteractor()))
+    ContentView()
+        .environmentObject(EmpleadosVM(networkInteractor: DataTestInteractor()))
+        // .environmentObject(EmpleadosVM.test)  // ZTip: pero no me gusta.
+        // más claro la 1º línea
 }

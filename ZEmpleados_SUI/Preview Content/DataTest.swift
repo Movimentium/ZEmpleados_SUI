@@ -29,3 +29,9 @@ struct DataTestInteractor: DataInteractor {
         try loadTestEmpleados()
     }
 }
+
+// ZTip: no me gusta demasiado
+extension EmpleadosVM {
+    static let test = EmpleadosVM(networkInteractor: DataTestInteractor())
+}
+
