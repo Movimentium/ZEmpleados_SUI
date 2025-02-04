@@ -8,10 +8,12 @@ final class EmpleadosVM: ObservableObject {
     let networkInteractor: DataInteractor
     
     @Published var empleados: [Empleado] = []
+    @Published var showDeleteAlert = false
     @Published var showErrorAlert = false
-    var errorMsg = ""
+    var alertMsg = "" // Reutilizado para ambas alerts... no me gusta
     @Published var sortType = SortType.ascendent
     @Published var strSearch = ""
+    
     
     init(networkInteractor: DataInteractor = NetworkInteractor()) {
         self.networkInteractor = networkInteractor
@@ -31,7 +33,7 @@ final class EmpleadosVM: ObservableObject {
         } catch {
             print(error) // ZTip: recuerda que \(error.localizedDescription) da MUY poca info
             await MainActor.run {
-                self.errorMsg = "\(error)"
+                self.alertMsg = "\(error)"
                 self.showErrorAlert = true
             }
         }
@@ -51,6 +53,10 @@ final class EmpleadosVM: ObservableObject {
                 case .byID:        $0.id <= $1.id
                 }
             }
+    }
+    
+    func delete(empleado: Empleado) {
+        empleados.removeAll(where: { $0.id == empleado.id })
     }
 }
 

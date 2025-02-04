@@ -17,6 +17,14 @@ struct ContentView: View {
                     Section {
                         ForEach(vm.getEmpleados(porDpto: dpto)) { empleado in
                             EmpleadoCellView(empleado: empleado)
+                                .swipeActions {
+                                    Button {
+                                        vm.delete(empleado: empleado)
+                                    } label: {
+                                        Label("Borrar", systemImage: "trash")
+                                    }
+                                    .tint(.red)
+                                }
                         }
                     } header: {
                         Text(dpto.rawValue)
@@ -33,15 +41,20 @@ struct ContentView: View {
                                 vm.sortType = sortType
                             }
                         }
-                    } 
+                    }
                 }
             }
         }
-        .alert("Error", isPresented: $vm.showErrorAlert) {
-            Text(vm.errorMsg)
+        .alert("Error", isPresented: $vm.showErrorAlert) { } message: {
+            Text(vm.alertMsg)
             /* en URL_Extension, cambia en el str path a "getEmp" pe
              para probar esta alert. O, pe, cambia en EmpleadoDTO firstmememe
             */
+        }
+        .alert("Borrado", isPresented: $vm.showDeleteAlert) {
+
+        } message: {
+            Text(vm.alertMsg)
         }
         
     }
