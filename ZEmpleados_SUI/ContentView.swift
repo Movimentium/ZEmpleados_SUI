@@ -17,6 +17,12 @@ struct ContentView: View {
             }
             .navigationTitle("Empleados")
         }
+        .alert("Error", isPresented: $vm.showErrorAlert) {
+            /* en URL_Extension, cambia en el str path a "getEmp" pe
+             para probar esta alert. O, pe, cambia en EmpleadoDTO a avatarrr
+            */
+            Text(vm.errorMsg)
+        }
         
     }
 }

@@ -8,6 +8,8 @@ final class EmpleadosVM: ObservableObject {
     let networkInteractor: DataInteractor
     
     @Published var empleados: [Empleado] = []
+    @Published var showErrorAlert = false
+    var errorMsg = ""
     
     init(networkInteractor: DataInteractor = NetworkInteractor()) {
         self.networkInteractor = networkInteractor
@@ -20,11 +22,16 @@ final class EmpleadosVM: ObservableObject {
         do {
             let emps = try await networkInteractor.getEmpleados()  // Sin @MainActor: se ejecuta en hilo secundario
             // 2. Hacer esto, en lugar de escribir @MainActor (que hace que toda la func se ejecute en el main thread)
+            // emps es un valor enviable (Sendable)
             await MainActor.run {
                 self.empleados = emps
             }
         } catch {
             print(error) // ZTip: recuerda que \(error.localizedDescription) da MUY poca info
+            await MainActor.run {
+                self.errorMsg = "\(error)"
+                self.showErrorAlert = true
+            }
         }
     }
 }
