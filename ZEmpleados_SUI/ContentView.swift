@@ -8,10 +8,24 @@ struct ContentView: View {
     @ObservedObject var vm = EmpleadosVM()
     
     var body: some View {
-        List(vm.empleados) { empleado in
-            let strEmpleado = empleado.firstName + " " + empleado.lastName
-            Text(strEmpleado)
+        NavigationStack {
+            List(vm.empleados) { empleado in
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(empleado.fullName)
+                            .font(.headline)
+                        Text(empleado.email)
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    // TODO: AsyncImage
+
+                }
+            }
+            .navigationTitle("Empleados")
         }
+        
     }
 }
 

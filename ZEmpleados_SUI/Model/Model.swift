@@ -16,3 +16,9 @@ struct Empleado: Identifiable, Hashable {
     let gender: Genero            // from Enums.swift
     let department: Departamento  // from Enums.swift
 }
+
+extension Empleado {
+    var fullName: String {
+        "\(lastName) \(firstName)"
+    }
+}
