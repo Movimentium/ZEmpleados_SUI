@@ -5,11 +5,12 @@
 import Foundation
 
 final class EmpleadosVM: ObservableObject {
-    let networkInteractor = NetworkInteractor()
+    let networkInteractor: DataInteractor
     
     @Published var empleados: [Empleado] = []
     
-    init() {
+    init(networkInteractor: DataInteractor = NetworkInteractor()) {
+        self.networkInteractor = networkInteractor
         Task { await getEmpleados() }
     }
     

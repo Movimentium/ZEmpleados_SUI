@@ -21,6 +21,8 @@
 		0CA39C142D517673004AF811 /* URLSession_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C132D517673004AF811 /* URLSession_Extension.swift */; };
 		0CA39C172D517781004AF811 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C162D517781004AF811 /* NetworkInteractor.swift */; };
 		0CA39C1A2D517DFA004AF811 /* EmpleadosVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C192D517DFA004AF811 /* EmpleadosVM.swift */; };
+		0CA39C1C2D518D2B004AF811 /* testEmpleados.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CA39C1B2D518D2B004AF811 /* testEmpleados.json */; };
+		0CA39C1E2D518D62004AF811 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39C1D2D518D62004AF811 /* DataTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		0CA39C132D517673004AF811 /* URLSession_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession_Extension.swift; sourceTree = "<group>"; };
 		0CA39C162D517781004AF811 /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
 		0CA39C192D517DFA004AF811 /* EmpleadosVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpleadosVM.swift; sourceTree = "<group>"; };
+		0CA39C1B2D518D2B004AF811 /* testEmpleados.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testEmpleados.json; sourceTree = "<group>"; };
+		0CA39C1D2D518D62004AF811 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		0CA39BFB2D513FEB004AF811 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				0CA39C1B2D518D2B004AF811 /* testEmpleados.json */,
+				0CA39C1D2D518D62004AF811 /* DataTest.swift */,
 				0CA39BFC2D513FEB004AF811 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -187,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA39C1C2D518D2B004AF811 /* testEmpleados.json in Resources */,
 				0CA39C0E2D515538004AF811 /* README.md in Resources */,
 				0CA39BFD2D513FEB004AF811 /* Preview Assets.xcassets in Resources */,
 				0CA39BFA2D513FEB004AF811 /* Assets.xcassets in Resources */,
@@ -207,6 +214,7 @@
 				0CA39C092D514785004AF811 /* Enums.swift in Sources */,
 				0CA39C102D516300004AF811 /* URLRequest_Extension.swift in Sources */,
 				0CA39C1A2D517DFA004AF811 /* EmpleadosVM.swift in Sources */,
+				0CA39C1E2D518D62004AF811 /* DataTest.swift in Sources */,
 				0CA39BF62D513FE9004AF811 /* ZEmpleados_SUIApp.swift in Sources */,
 				0CA39C172D517781004AF811 /* NetworkInteractor.swift in Sources */,
 				0CA39C072D514753004AF811 /* Model.swift in Sources */,

@@ -16,5 +16,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(vm: EmpleadosVM(networkInteractor: DataTestInteractor()))
 }

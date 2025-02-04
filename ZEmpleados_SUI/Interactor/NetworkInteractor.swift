@@ -4,7 +4,11 @@
 
 import SwiftUI
 
-struct NetworkInteractor {
+protocol DataInteractor {
+    func getEmpleados() async throws -> [Empleado]
+}
+
+struct NetworkInteractor: DataInteractor {
     
     func getJSON<JSON: Codable>(request: URLRequest, type: JSON.Type) async throws -> JSON {
         let (data, response) = try await URLSession.shared.getData(for: request)
