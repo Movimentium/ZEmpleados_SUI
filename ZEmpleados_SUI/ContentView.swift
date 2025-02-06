@@ -25,17 +25,7 @@ struct ContentView: View {
             }
             .navigationTitle("Empleados")
             .searchable(text: $vm.strSearch, prompt: "Buscar empleado")
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Menu("Ordenar") {
-                        ForEach(SortType.allCases) { sortType in
-                            Button(sortType.rawValue) {
-                                vm.sortType = sortType
-                            }
-                        }
-                    }
-                }
-            }
+            .toolBarWithSortBtn(sortValue: $vm.sortType)
         }
         .alert("Error", isPresented: $vm.showErrorAlert) { } message: {
             Text(vm.alertMsg)
@@ -43,17 +33,8 @@ struct ContentView: View {
              para probar esta alert. O, pe, cambia en EmpleadoDTO firstmememe
             */
         }
-        .alert("Borrado", isPresented: $vm.showDeleteAlert) {
-            Button("Borrar", role: .destructive) {
-                withAnimation {
-                    vm.deleteEmpleado()
-                }
-            }
-            Button("Cancelar", role: .cancel) { }
-        } message: {
-            Text(vm.alertMsg)
-        }
-        
+        .deleteAlert(show: $vm.showDeleteAlert,
+                     msg: vm.alertMsg, onDelete: vm.deleteEmpleado)
     }
 }
 
