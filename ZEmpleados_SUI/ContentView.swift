@@ -14,27 +14,33 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(Departamento.allCases) { dpto in
-                    Section {
-                        ForEach(vm.getEmpleados(porDpto: dpto)) { empleado in
-                            EmpleadoCellView(empleado: empleado, onDelete: vm.showAlertDelete)
-                        }
-                    } header: {
-                        Text(dpto.rawValue)
-                    }
+                    empleadoSection(dpto: dpto)
                 }
             }
             .navigationTitle("Empleados")
             .searchable(text: $vm.strSearch, prompt: "Buscar empleado")
             .toolBarWithSortBtn(sortValue: $vm.sortType)
+            //.modifier(ToolBarWithSortBtn(sortValue: $vm.sortType)) // alternativa
         }
         .alert("Error", isPresented: $vm.showErrorAlert) { } message: {
             Text(vm.alertMsg)
             /* en URL_Extension, cambia en el str path a "getEmp" pe
-             para probar esta alert. O, pe, cambia en EmpleadoDTO firstmememe
+             para probar esta alert. O pe, cambia en EmpleadoDTO firstmememe
             */
         }
         .deleteAlert(show: $vm.showDeleteAlert,
-                     msg: vm.alertMsg, onDelete: vm.deleteEmpleado)
+                     msg: vm.alertMsg, 
+                     onDelete: vm.deleteEmpleado)
+    }
+    
+    func empleadoSection(dpto: Departamento) -> some View {
+        Section {
+            ForEach(vm.getEmpleados(porDpto: dpto)) { empleado in
+                EmpleadoCellView(empleado: empleado, onDelete: vm.showAlertDelete)
+            }
+        } header: {
+            Text(dpto.rawValue)
+        }
     }
 }
 
