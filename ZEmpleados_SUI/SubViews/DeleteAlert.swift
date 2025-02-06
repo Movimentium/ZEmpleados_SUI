@@ -7,14 +7,14 @@ import SwiftUI
 struct DeleteAlert: ViewModifier {
     @Binding var show: Bool
     let msg: String
-    let onDelete: () -> Void
+    let onDelete: () -> Void  // ZTip
 
     func body(content: Content) -> some View {
         content
             .alert("Borrado", isPresented: $show) {
                 Button("Borrar", role: .destructive) {
                     withAnimation {
-                        onDelete()
+                        onDelete()  // ZTip 
                     }
                 }
                 Button("Cancelar", role: .cancel) { }

@@ -21,6 +21,9 @@ struct ContentView: View {
             .searchable(text: $vm.strSearch, prompt: "Buscar empleado")
             .toolBarWithSortBtn(sortValue: $vm.sortType)
             //.modifier(ToolBarWithSortBtn(sortValue: $vm.sortType)) // alternativa
+            .navigationDestination(for: Empleado.self) { empleado in
+                EmpleadoEditView(editVM: EmpleadoEditVM(empleado: empleado))
+            }
         }
         .alert("Error", isPresented: $vm.showErrorAlert) { } message: {
             Text(vm.alertMsg)
@@ -36,7 +39,9 @@ struct ContentView: View {
     func empleadoSection(dpto: Departamento) -> some View {
         Section {
             ForEach(vm.getEmpleados(porDpto: dpto)) { empleado in
-                EmpleadoCellView(empleado: empleado, onDelete: vm.showAlertDelete)
+                NavigationLink(value: empleado) {
+                    EmpleadoCellView(empleado: empleado, onDelete: vm.showAlertDelete)
+                }
             }
         } header: {
             Text(dpto.rawValue)
