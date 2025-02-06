@@ -16,15 +16,7 @@ struct ContentView: View {
                 ForEach(Departamento.allCases) { dpto in
                     Section {
                         ForEach(vm.getEmpleados(porDpto: dpto)) { empleado in
-                            EmpleadoCellView(empleado: empleado)
-                                .swipeActions {
-                                    Button {
-                                        vm.delete(empleado: empleado)
-                                    } label: {
-                                        Label("Borrar", systemImage: "trash")
-                                    }
-                                    .tint(.red)
-                                }
+                            EmpleadoCellView(empleado: empleado, onDelete: vm.showAlertDelete)
                         }
                     } header: {
                         Text(dpto.rawValue)
@@ -52,7 +44,12 @@ struct ContentView: View {
             */
         }
         .alert("Borrado", isPresented: $vm.showDeleteAlert) {
-
+            Button("Borrar", role: .destructive) {
+                withAnimation {
+                    vm.deleteEmpleado()
+                }
+            }
+            Button("Cancelar", role: .cancel) { }
         } message: {
             Text(vm.alertMsg)
         }

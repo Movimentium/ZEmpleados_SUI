@@ -6,6 +6,7 @@ import SwiftUI
 
 struct EmpleadoCellView: View {
     let empleado: Empleado
+    let onDelete: (Empleado) -> Void  // ZTip
     
     var body: some View {
         HStack {
@@ -34,9 +35,18 @@ struct EmpleadoCellView: View {
             .shadow(radius: 3)
             .padding(.vertical, 6)
         }
+        .swipeActions {
+            Button {
+                onDelete(empleado)  // ZTip
+            } label: {
+                Label("Borrar", systemImage: "trash")
+            }
+            .tint(.red)
+        }
     }
 }
 
 #Preview {
-    EmpleadoCellView(empleado: .testInstance)
+    EmpleadoCellView(empleado: .testInstance,
+                     onDelete: { _ in })   // ZTip
 }

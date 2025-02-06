@@ -13,7 +13,7 @@ final class EmpleadosVM: ObservableObject {
     var alertMsg = "" // Reutilizado para ambas alerts... no me gusta
     @Published var sortType = SortType.ascendent
     @Published var strSearch = ""
-    
+    var empleadoToDelete: Empleado?
     
     init(networkInteractor: DataInteractor = NetworkInteractor()) {
         self.networkInteractor = networkInteractor
@@ -55,8 +55,17 @@ final class EmpleadosVM: ObservableObject {
             }
     }
     
-    func delete(empleado: Empleado) {
-        empleados.removeAll(where: { $0.id == empleado.id })
+    // MARK: - Delete empleado
+    func showAlertDelete(empleado: Empleado) {
+        empleadoToDelete = empleado
+        alertMsg = "¿Estás seguro de borrar el empleado \(empleado.fullName)?"
+        showDeleteAlert = true
+    }
+    
+    func deleteEmpleado() {
+        if let empleadoToDelete {
+            empleados.removeAll(where: { $0.id == empleadoToDelete.id })
+        }
     }
 }
 
