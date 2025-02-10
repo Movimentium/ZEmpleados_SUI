@@ -164,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				0CA39C192D517DFA004AF811 /* EmpleadosVM.swift */,
-				0C6DAF322D5980D0006DC49A /* Validator.swift */,
 				0C41AB102D557224000C4665 /* EmpleadoEditVM.swift */,
+				0C6DAF322D5980D0006DC49A /* Validator.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

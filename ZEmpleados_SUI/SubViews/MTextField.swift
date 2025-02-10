@@ -30,8 +30,7 @@ struct MTextField: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .overlay {
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(lineWidth: 2)
-                    .fill(.red)
+                    .stroke(lineWidth: 2).fill(.red)
                     .opacity(isDataError ? 1 : 0)
             }
             if isDataError {
