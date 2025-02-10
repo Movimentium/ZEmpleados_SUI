@@ -13,6 +13,7 @@
 		0C41AB0D2D556B1C000C4665 /* DeleteAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41AB0C2D556B1C000C4665 /* DeleteAlert.swift */; };
 		0C41AB0F2D557181000C4665 /* EmpleadoEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41AB0E2D557181000C4665 /* EmpleadoEditView.swift */; };
 		0C41AB112D557224000C4665 /* EmpleadoEditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C41AB102D557224000C4665 /* EmpleadoEditVM.swift */; };
+		0C6DAF312D597ACE006DC49A /* MTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DAF302D597ACE006DC49A /* MTextField.swift */; };
 		0CA39BF62D513FE9004AF811 /* ZEmpleados_SUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39BF52D513FE9004AF811 /* ZEmpleados_SUIApp.swift */; };
 		0CA39BF82D513FE9004AF811 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA39BF72D513FE9004AF811 /* ContentView.swift */; };
 		0CA39BFA2D513FEB004AF811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CA39BF92D513FEB004AF811 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		0C41AB0C2D556B1C000C4665 /* DeleteAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlert.swift; sourceTree = "<group>"; };
 		0C41AB0E2D557181000C4665 /* EmpleadoEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpleadoEditView.swift; sourceTree = "<group>"; };
 		0C41AB102D557224000C4665 /* EmpleadoEditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpleadoEditVM.swift; sourceTree = "<group>"; };
+		0C6DAF302D597ACE006DC49A /* MTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTextField.swift; sourceTree = "<group>"; };
 		0CA39BF22D513FE9004AF811 /* ZEmpleados_SUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEmpleados_SUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA39BF52D513FE9004AF811 /* ZEmpleados_SUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZEmpleados_SUIApp.swift; sourceTree = "<group>"; };
 		0CA39BF72D513FE9004AF811 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				0C1BBBFB2D5298BC005511DD /* EmpleadoCellView.swift */,
 				0C41AB0A2D556914000C4665 /* ToolBarWithSortBtn.swift */,
 				0C41AB0C2D556B1C000C4665 /* DeleteAlert.swift */,
+				0C6DAF302D597ACE006DC49A /* MTextField.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				0CA39BF82D513FE9004AF811 /* ContentView.swift in Sources */,
 				0CA39C092D514785004AF811 /* Enums.swift in Sources */,
 				0CA39C102D516300004AF811 /* URLRequest_Extension.swift in Sources */,
+				0C6DAF312D597ACE006DC49A /* MTextField.swift in Sources */,
 				0C1BBBFC2D5298BC005511DD /* EmpleadoCellView.swift in Sources */,
 				0CA39C1A2D517DFA004AF811 /* EmpleadosVM.swift in Sources */,
 				0C41AB112D557224000C4665 /* EmpleadoEditVM.swift in Sources */,

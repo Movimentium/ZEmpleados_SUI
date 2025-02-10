@@ -1,4 +1,4 @@
 # ZEmpleados_SUI
 
-Ejemplo **didáctico** usado en el curso SDP2023
+Ejemplo **didáctico** basado en otro realizado en el curso SDP2023
 
