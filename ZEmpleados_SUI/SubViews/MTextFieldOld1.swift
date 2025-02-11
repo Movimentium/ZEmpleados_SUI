@@ -1,14 +1,13 @@
-//  MTextFieldV2.swift
+//  MTextFieldOld1.swift
 //  ZEmpleados_SUI
 //  Created by Miguel Gallego on 10/2/25.
 
 import SwiftUI
 
-struct MTextFieldV2: View {
+struct MTextFieldOld1: View {
     let title: String
     @Binding var text: String
-    var validator: (String) -> String = Validator.shared.isEmptyMsg
-    @State private var errorMsg: String = ""
+    @State private var isDataError = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,33 +31,37 @@ struct MTextFieldV2: View {
             .overlay {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(lineWidth: 2).fill(.red)
-                    .opacity(errorMsg.isEmpty ? 0 : 1)
+                    .opacity(isDataError ? 1 : 0)
             }
-            if !errorMsg.isEmpty {
-                Text("\(title.capitalized) \(errorMsg)")
+            if isDataError {
+                Text("\(title.capitalized) no puede estar vacío")
                     .font(.caption).bold().foregroundStyle(.red)
                     .transition(.opacity)
                     // .opacity(isDataError ? 1 : 0) // Alternativa sin "if isDataError"
             }
         }
         .onChange(of: text) {
-            errorMsg = validator(text)
+            if text.isEmpty {
+                isDataError = true
+            } else {
+                isDataError = false
+            }
         }
-        .animation(.default, value: errorMsg)
+        .animation(.default, value: isDataError)
 
     }
 }
 
-fileprivate struct Preview_MTextFieldV2: View {
+fileprivate struct Preview_MTextField: View {
     @State var txt = "Miguel"
     
     var body: some View {
-        MTextFieldV2(title: "Nombre", text: $txt)
-            .padding()
+        MTextFieldOld1(title: "Nombre", text: $txt)
             .border(.red)
+            .padding()
     }
 }
 
 #Preview {
-    Preview_MTextFieldV2()
+    Preview_MTextField()
 }

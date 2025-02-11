@@ -6,12 +6,15 @@ import SwiftUI
 
 struct EmpleadoEditView: View {
     @ObservedObject var editVM: EmpleadoEditVM
+    private let valid = Validator.shared
     
     var body: some View {
         Form {
             Section {
                 MTextField(title: "Nombre", text: $editVM.firstName)
                 MTextField(title: "Apellido", text: $editVM.lastName)
+                MTextField(title: "Email", text: $editVM.email, validator: valid.isValidEmailMsg)
+                MTextField(title: "Zip Code", text: $editVM.zipcode, validator: valid.alwaysOK)
             } header: {
                 Text("Datos personales")
             }
