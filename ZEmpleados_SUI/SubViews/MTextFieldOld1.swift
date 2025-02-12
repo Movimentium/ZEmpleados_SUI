@@ -9,12 +9,16 @@ struct MTextFieldOld1: View {
     @Binding var text: String
     @State private var isDataError = false
     
+    @FocusState private var enfocado: Bool  // ZTip: sólo valido para 1 TextField
+    // En la preview, el cursor desaparece si es false
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(title.capitalized)
                 .font(.headline)
             HStack {
                 TextField(title.capitalized, text: $text)
+                    .focused($enfocado)  // <===
                 Button {
                     text = ""
                 } label: {
@@ -48,7 +52,11 @@ struct MTextFieldOld1: View {
             }
         }
         .animation(.default, value: isDataError)
-
+        
+        Button("Mostrar/Esconder Teclado") {
+            enfocado.toggle()
+        }
+        .buttonStyle(.borderedProminent)
     }
 }
 
