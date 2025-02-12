@@ -25,5 +25,16 @@ struct Validator {
         }
     }
     
+    // Usa la validación isEmptyMsg(_:) y otra más // No me gusta esta mezcla...
+    func isGreaterThan4chars(_ str: String) -> String {
+        var errorMsg = isEmptyMsg(str)
+        if str.count <= 4 {
+            if !errorMsg.isEmpty { // "no puede estar vacío"
+                errorMsg += " y "
+            }
+            errorMsg += "debe tener más de 4 caracteres"
+        }
+        return errorMsg
+    }
     
 }

@@ -13,8 +13,8 @@ final class EmpleadoEditVM: ObservableObject {
     @Published var email = ""
     @Published var address = ""
     @Published var zipcode = ""
-    @Published var gender = ""
-    @Published var department = ""
+    @Published var gender: Genero
+    @Published var department: Departamento
 
     init(empleado: Empleado) {
         self.empleado = empleado
@@ -25,7 +25,7 @@ final class EmpleadoEditVM: ObservableObject {
         address = empleado.address
         zipcode = empleado.zipcode
         username = empleado.username
-        gender = empleado.gender.rawValue
-        department = empleado.department.rawValue
+        gender = empleado.gender
+        department = empleado.department
     }
 }
