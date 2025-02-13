@@ -6,7 +6,7 @@ import SwiftUI
 
 struct ContentView: View {
     // @ObservedObject var vm = EmpleadosVM()
-    // Cambiamos esto por un @StateObject instanciado en ...App.swift
+    // Cambiamos esto ^ por un @StateObject instanciado en ...App.swift
     // e inyectándolo como un objeto de entorno con .environmentObject()
     @EnvironmentObject var vm: EmpleadosVM
     

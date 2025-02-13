@@ -36,6 +36,33 @@ enum SortType: String, CaseIterable, Identifiable {
     var id: Self { self }
 }
 
+enum EmpleadoEditTextField: Int, CaseIterable {
+    case firstName = 0
+    case lastName
+    case address
+    case zipcode
+    case email
+    case username
+    
+    private var count: Int {
+        Self.allCases.count
+    }
+    
+    private var lastCaseIdx: Int {
+        count - 1
+    }
+    
+    mutating func next() {
+        let idx = self.rawValue + 1 == count ? 0 : self.rawValue + 1
+        self = Self.allCases[idx]
+    }
+    
+    mutating func prev() {
+        let idx = self.rawValue - 1 < 0 ? lastCaseIdx : self.rawValue - 1
+        self = Self.allCases[idx]
+    }
+}
+
 
 // Remember CaseIterable:  ZTip
 // let casosGenero = Genero.allCases
